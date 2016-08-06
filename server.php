@@ -12,11 +12,10 @@ if($stringData == "undefined") {
 }
 else {
   $data = ('text/' . $ip . '/log.txt');
-  if (explode(':', $stringData)['0'] == "string") {
-   $data['0'] = $stringData;
- } elseif (explode(':', $stringData)['0'] == "image") {
-   $data['1'] = $stringData;
- }
+  
+  (explode(':', $stringData)['0'] == "string") ? $data['0'] = $stringData; : null;
+  (explode(':', $stringData)['0'] == "image") ? $data['1'] == $stringData; : null;
+
  file_put_contents('text/' . $ip . '/log.txt', implode('', $data));
 }
 ?>
