@@ -1,16 +1,16 @@
-<!DOCTYPE html>
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
 $filename = 'text/'.$ip.'/log.txt';
 
-if (file_exists($filename)) {
-}
-else
-{ 
+if (!file_exists($filename)) {
+
 mkdir('text/'.$ip, 0777, true);
 $myfile = fopen("text/".$ip."/log.txt", "w");
+
 }
 ?>
+
+<!DOCTYPE html>
 
 <html lang="en">
 
